@@ -1,0 +1,41 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+
+  <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="33" fxFlex="100">
+    <div style="margin-bottom: 30px; text-align: center; font-weight: bold;">
+      Live
+    </div>
+
+    <cricket-match-card
+     *ngFor="let item of lives"
+     [item]=item
+     >
+    </cricket-match-card>
+  </div>
+
+  <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="33" fxFlex="100">
+    <div style="margin-bottom: 30px; text-align: center; font-weight: bold;">
+      Completed
+    </div>
+
+    <cricket-match-card
+     *ngFor="let item of completes"
+     [item]=item
+     >
+    </cricket-match-card>
+  </div>
+
+  <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="33" fxFlex="100">
+    <div style="margin-bottom: 30px; text-align: center; font-weight: bold;">
+      Upcoming
+    </div>
+    <cricket-match-card
+     *ngFor="let item of upcomings"
+     [item]=item
+     >
+    </cricket-match-card>
+  </div>
+</div>
+

@@ -1,0 +1,39 @@
+<mat-card style="margin-bottom: 10px !important;">
+  <mat-card-header flxLayout fxLayoutAlign="space-between"
+    [ngStyle]="{ 'background-color': item.type === 'LIVE' ? '#00AB4E' : '#252525', color: 'white' }">
+    <mat-card-title>{{item.date}}</mat-card-title>
+    <div *ngIf="item.type === 'LIVE'">Live</div>
+    <div *ngIf="item.time">{{item.time}} your time</div>
+  </mat-card-header>
+  <mat-card-content flxLayout="column">
+    <div style="text-align: center">{{item.title}}</div>
+    <div flxLayout fxLayoutAlign="center center">
+      <div fxFlex="41.66" fxLayout fxFlexAlign="center center">
+        <div style="margin-right: 5px;">
+          <span class="fi fi-ie" style="font-size: 50px;"></span>
+          <div style="text-align: center;">
+            Ireland
+          </div>
+        </div>
+        <div style="margin: auto;">
+          209 & 540
+        </div>
+      </div>
+      <div fxLayout fxFlexAlign="center center">
+        <img src="assets/images/cup.jpg" width="100px" />
+      </div>
+      <div fxFlex="41.66" fxLayout fxFlexAlign="center center">
+        <div style="margin: auto; text-align: end;">
+          8d-435
+        </div>
+        <div style="margin-left: 5px">
+          <span class="fi fi-gb-eng" style="font-size: 50px;"></span>
+          <div style="text-align: center;">
+            England
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">{{item.description}}</div>
+  </mat-card-content>
+</mat-card>
